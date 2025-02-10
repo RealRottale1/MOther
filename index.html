@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Simple Sentence Generator</h2>
+<input type="button" id="generateBtn" value="Generate Sentence">
+<p id="output"></p>
+<script>
+    const output = document.getElementById("output");
+    const generateBtn = document.getElementById("generateBtn");
+    const words = ["I", "like", "to", 'code'];
+    function generateSentence() {
+        let sentence = "";
+        const wordsLength = words.length;
+        for (let i in words) {
+            sentence += words[i] + (i < wordsLength ? " " : "");
+        }
+        output.innerHTML = sentence;
+    }
+    generateBtn.addEventListener("click", generateSentence);
+</script>
+</body>
+</html>
